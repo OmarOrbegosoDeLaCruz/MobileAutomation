@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "node Tests/Android/BasicTest.js",
+    "test:android": "node Tests/Android/BasicTest.js"
+  },
+  "devDependencies": {
+    "webdriverio": "^9.27.1"
+  }
+}

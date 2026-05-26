@@ -9,5 +9,8 @@
     "@wdio/mocha-framework": "^9.27.2",
     "@wdio/spec-reporter": "^9.27.2",
     "webdriverio": "^9.27.1"
+  },
+  "overrides": {
+    "serialize-javascript": "7.0.5"
   }
 }

@@ -16,6 +16,10 @@ class DriverHelper {
   }
 
   static async holdFinalState(driver, timeout = 5000) {
+    if (process.env.CI) {
+      return;
+    }
+
     console.log('Holding the session so you can see the final state...');
     await driver.pause(timeout);
   }

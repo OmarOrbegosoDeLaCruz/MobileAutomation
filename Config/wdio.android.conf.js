@@ -13,7 +13,14 @@ exports.config = {
   port: parseInt(process.env.APPIUM_PORT, 10) || 4723,
   logLevel: process.env.WDIO_LOG_LEVEL || 'error',
   framework: 'mocha',
-  reporters: ['spec'],
+  reporters: [
+    'spec',
+    ['allure', {
+      outputDir: 'Reports/allure-results',
+      disableWebdriverStepsReporting: true,
+      disableWebdriverScreenshotsReporting: false,
+    }],
+  ],
   capabilities: [settingsCapabilities],
   mochaOpts: {
     ui: 'bdd',
